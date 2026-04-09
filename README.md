@@ -12,7 +12,7 @@
 
 > **Does Sydney's property market price homes rationally or are buyers paying a premium for reputation over real value?**
 
-Sydney is consistently ranked among the world's least affordable cities. But *which* metric you use to measure "expensive" changes the answer entirely. Raw median prices favour suburbs with a handful of ultra-luxury sales. Price per square metre rewards density. Affordability ratio exposes structural stress.
+Sydney is consistently ranked among the world's least affordable cities. But which metric you use to measure "expensive" changes the answer entirely. Raw median prices favour suburbs with a handful of ultra-luxury sales. Price per square metre rewards density. Affordability ratio exposes structural stress.
 
 This project was built to answer one question: **If you stripped away suburb reputation and looked purely at the data, where does value actually exist in Sydney's property market and what is an illusion?**
 
