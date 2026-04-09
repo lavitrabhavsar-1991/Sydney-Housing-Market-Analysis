@@ -10,7 +10,7 @@
 
 ## 📋 Project Overview
 
-A analytics project examining **Sydney's property market** — from raw data transformation through SQL to an interactive Power BI dashboard. The project uncovers pricing patterns, affordability stress points, and the influence of macroeconomic factors like the RBA cash rate on buyer behaviour.
+A analytics project examining **Sydney's property market**. From raw data transformation through SQL to an interactive Power BI dashboard. The project uncovers pricing patterns, affordability stress points, and the influence of macroeconomic factors like the RBA cash rate on buyer behaviour.
 
 > **Goal:** Identify the key drivers of Sydney property prices and surface actionable insights for buyers, investors, and policymakers.
 
