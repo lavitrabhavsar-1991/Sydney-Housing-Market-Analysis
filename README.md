@@ -8,62 +8,127 @@
 
 ---
 
-## 📋 Project Overview
+## 🎯 The Business Question
 
-A analytics project examining **Sydney's property market**. From raw data transformation through SQL to an interactive Power BI dashboard. The project uncovers pricing patterns, affordability stress points, and the influence of macroeconomic factors like the RBA cash rate on buyer behaviour.
+> **Does Sydney's property market price homes rationally — or are buyers paying a premium for reputation over real value?**
 
-> **Goal:** Identify the key drivers of Sydney property prices and surface actionable insights for buyers, investors, and policymakers.
+Sydney is consistently ranked among the world's least affordable cities. But *which* metric you use to measure "expensive" changes the answer entirely. Raw median prices favour suburbs with a handful of ultra-luxury sales. Price per square metre rewards density. Affordability ratio exposes structural stress.
+
+This project was built to answer one question: **if you stripped away suburb reputation and looked purely at the data, where does value actually exist in Sydney's property market — and where is it an illusion?**
+
+---
+
+## 💡 What I Expected vs What Actually Surprised Me
+
+This is where the data got interesting.
+
+### ✅ What I Expected (and the data confirmed)
+
+**CBD proximity drives price.** No surprise — median prices decay almost linearly from **$2.02M** within 10km of the CBD down to approximately **$1.0M** at 50km+. Distance is the single most consistent structural variable in the dataset.
+
+**Prestigious harbour suburbs dominate the top of the price rankings.** Kurraba Point, Darling Point, and Rose Bay all appear near the top of the suburb median price list. Expected.
+
+---
+
+### ⚡ What Surprised Me (where the data challenged assumptions)
+
+**1. The most "expensive" suburb in Sydney is a statistical illusion.**
+
+Kurraba Point sits at a staggering **~$34M median** — almost 5× higher than its nearest competitors at $6–9M. But when you calculate its affordability ratio (property price ÷ suburb median income), it comes out at **419×** annual income. The next highest suburb, Rose Bay, is 119×. Darling Point is 104×.
+
+That gap between 419× and 119× doesn't suggest Kurraba Point is "more expensive" — it suggests its median is being distorted by an extremely small number of ultra-premium transactions. It's not a functioning residential market. It's an outlier masquerading as a suburb.
+
+**Recommendation for buyers/investors:** Kurraba Point's headline median should be treated as noise, not signal. Rose Bay and Darling Point represent genuinely high-value markets; Kurraba Point represents statistical distortion.
+
+---
+
+**2. The highest price-per-sqm suburb is not a harbour postcode.**
+
+I expected Kurraba Point or Darling Point to dominate price per square metre. They don't.
+
+**Barangaroo leads at $23K/sqm**, followed by Surry Hills and Woollahra at ~$21K/sqm. The prestigious harbour suburbs, despite their eye-catching medians, fall below these inner-city areas on density-adjusted value.
+
+Why? Barangaroo and Surry Hills are dominated by compact, high-end apartments. Harbour suburbs tend to have larger land parcels — which dilutes the per-sqm figure even at high prices. This means an investor buying on price/sqm is buying a completely different market to one buying on raw median.
+
+**Recommendation:** Raw median price and price/sqm are answering different investment questions. A buyer seeking capital growth per dollar spent should look at Barangaroo and inner-city suburbs. A buyer seeking prestige and a larger landholding should look at the harbour belt — but they are paying a different kind of premium.
+
+---
+
+**3. Units are more expensive than houses — the opposite of the "Great Australian Dream."**
+
+The received wisdom in Australian property is that houses command a premium over apartments and units. In this dataset, **Block of Units has the highest median at $2.9M**, while Houses sit at the bottom of the property type rankings at **$1.4M**.
+
+This likely reflects geography: the most expensive suburbs in Sydney are dominated by apartment and unit stock (Barangaroo, Surry Hills, inner-east). The house market, by volume, is pulled toward outer suburbs where prices are lower. But it directly challenges the assumption that "houses are always worth more."
+
+**Recommendation:** Property type alone is a weak predictor of value without controlling for location. Any analysis comparing house vs unit returns needs to account for the suburb distribution of that stock.
+
+---
+
+**4. The densest suburb in Sydney doesn't appear in any top-price list.**
+
+Chippendale ranks first for suburb density at **18,571 people/km²** — yet it does not appear in the top suburbs by median price, price/sqm, or price/bed. This challenges the assumption that density signals desirability or premium pricing.
+
+High density in Sydney appears to reflect affordable inner-city apartment stock, not premium positioning. Density and desirability are not the same variable.
+
+---
+
+**5. Darling Point has the highest price per bedroom but not the highest price per sqm.**
+
+Darling Point leads on **price per bed at $2.9M/bedroom** but does not lead on price per sqm. This suggests Darling Point properties are large-format, low-density dwellings — you are paying for fewer, more exclusive bedrooms in larger homes. It's a different type of premium to Barangaroo's compact, high-value-per-metre stock.
+
+---
+
+## 📊 Dashboard Overview
+
+The Power BI dashboard is structured across two analytical lenses:
+
+**Page 1 — Suburb & Property Intelligence**
+Median price by suburb, price per bed, price per sqm, and property type breakdown. Designed to answer: *which suburbs offer what kind of value, and by which measure?*
+
+**Page 2 — Structural & Macro Drivers**
+CBD distance bands, suburb density, median income, affordability ratios, and the RBA cash rate correlation. Designed to answer: *what structural factors are actually driving prices, and which assumptions don't hold up?*
+
+---
+
+## 🛠️ Technical Approach
+
+| Layer | Tool | Decision |
+|---|---|---|
+| Data Storage | MySQL 8.0 | Source database for raw property records from Domain.com.au |
+| Data Cleaning | SQL (TRIM, UPPER, WHERE filters) | Null removal, suburb/type standardisation |
+| Feature Engineering | SQL Window Functions | 12+ derived columns: price/bed, price/sqm, distance bands, density, affordability ratio, inflation-adjusted price |
+| Median Computation | ROW_NUMBER() OVER PARTITION | Used true statistical median throughout — AVG() is meaningless in a market with Kurraba Point as an outlier |
+| Visualisation | Power BI Desktop | 2-page dashboard with cross-filtering slicers |
+
+**Why true median instead of average?**
+Kurraba Point's ~$34M median would pull `AVG(price)` significantly for any aggregation including that suburb. Every KPI table in this project uses `ROW_NUMBER() OVER (PARTITION BY ... ORDER BY price)` to compute the statistical midpoint. This is a deliberate methodological choice, not a default.
 
 ---
 
 ## 🗂️ Repository Structure
 
 ```
-sydney-housing-analysis/
+Sydney-Housing-Market-Analysis/
 │
-├── 📄 Sydney_House_SQL_Query.sql       
-├── 📊 Sydney_House_Visualization.pbix  # Power BI dashboard (3-page interactive report)
+├── 📄 MySQL Query                      # Full pipeline: cleaning → feature engineering → 12 KPI tables
+├── 📊 Sydney House Visualization.pbix  # Power BI dashboard (2-page interactive report)
 └── 📖 README.md
 ```
 
 ---
 
-## 🛠️ Tech Stack & Methodology
+## 🚀 If I Were to Extend This Project
 
-| Layer | Tool | Purpose |
-|---|---|---|
-| Data Storage | MySQL 8.0 | Source database for raw property records |
-| Data Cleaning | SQL (CTEs, TRIM, UPPER, WHERE filters) | Removed nulls, standardised suburb/type names |
-| Feature Engineering | SQL Window Functions | Derived price/bed, price/sqm, distance bands, suburb density, affordability ratio |
-| KPI Computation | SQL Median via ROW_NUMBER() | 12 analytical KPI tables built from scratch |
-| Visualisation | Power BI Desktop | 3-page interactive dashboard with slicers and cross-filtering |
+- **Predictive model:** Train an XGBoost regressor on the 12 engineered features to predict sale price — testing whether suburb reputation variables outperform structural ones (sqm, distance, density)
+- **Cash rate impact analysis:** The dataset includes RBA cash rate at time of sale. A proper time-series regression could quantify how much each 25bp rate rise suppresses median prices, and with what lag
+- **Cluster analysis:** Use k-means on (price/sqm, affordability ratio, density, income) to identify which suburbs are genuinely similar despite different reputations — and which suburbs are outliers being grouped incorrectly with their postcode neighbours
 
 ---
 
-## 📊 Key Findings
+## 👤 About
 
-### Suburb & Property Insights
+Built by an aspiring data analyst passionate about asking better questions of data, not just reporting numbers.
 
-| Insight | Finding |
-|---|---|
-| 🏆 Most Expensive Suburb (Median) | **Kurraba Point** at ~$34M avg median |
-| 💰 Highest Price/Bed | **Darling Point** at $2.9M/bed |
-| 🏢 Most Expensive Property Type | **Block of Units** at $2.9M median |
-| 📐 Highest Price/sqm | **Barangaroo** at $23K/sqm — outranks prestige harbour suburbs |
-
-> **Insight:** Price per sqm tells a different story to raw median price. Barangaroo and Surry Hills dominate on density-adjusted value which is likely driven by apartment-heavy stock and premium inner-city demand. Kurraba Point's headline price is inflated by a small number of ultra-premium sales.
-
----
-
-### Macro & Structural Drivers
-
-| Insight | Finding |
-|---|---|
-| 📍 CBD Proximity Premium | 0–10 km: **$2.02M** → 50+ km: ~$1.0M |
-| 👥 Densest Suburb | **Chippendale** at 18,571 people/km² |
-| 💼 Highest Median Income Suburb | **Barangaroo** at $97,500 |
-| ⚠️ Worst Affordability | **Kurraba Point** at ratio **419×** annual income |
-
-> **Insight:** Kurraba Point's affordability ratio of 419× vs the next suburb at 119× (Rose Bay) flags it as an ultra-luxury outlier, not a mainstream market. The RBA cash rate analysis enables correlation testing between rate hikes and price softening which is a valuable macro lens.
+🐙 [GitHub](https://github.com/lavitrabhavsar-1991) · 📧 Connect on [LinkedIn](#)
 
 ---
