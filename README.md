@@ -10,7 +10,7 @@
 
 ## 📋 Project Overview
 
-A full-cycle analytics project examining **Sydney's residential property market** — from raw data transformation through SQL to an interactive Power BI dashboard. The project uncovers pricing patterns, affordability stress points, and the influence of macroeconomic factors like the RBA cash rate on buyer behaviour.
+A analytics project examining **Sydney's property market** — from raw data transformation through SQL to an interactive Power BI dashboard. The project uncovers pricing patterns, affordability stress points, and the influence of macroeconomic factors like the RBA cash rate on buyer behaviour.
 
 > **Goal:** Identify the key drivers of Sydney property prices and surface actionable insights for buyers, investors, and policymakers.
 
@@ -22,7 +22,7 @@ A full-cycle analytics project examining **Sydney's residential property market*
 sydney-housing-analysis/
 │
 ├── 📄 Sydney_House_SQL_Query.sql       # Full data pipeline: cleaning → feature engineering → KPIs
-├── 📊 Sydney_House_Visualization.pbix  # Power BI dashboard (2-page interactive report)
+├── 📊 Sydney_House_Visualization.pbix  # Power BI dashboard (3-page interactive report)
 └── 📖 README.md
 ```
 
@@ -36,40 +36,13 @@ sydney-housing-analysis/
 | Data Cleaning | SQL (CTEs, TRIM, UPPER, WHERE filters) | Removed nulls, standardised suburb/type names |
 | Feature Engineering | SQL Window Functions | Derived price/bed, price/sqm, distance bands, suburb density, affordability ratio |
 | KPI Computation | SQL Median via ROW_NUMBER() | 12 analytical KPI tables built from scratch |
-| Visualisation | Power BI Desktop | 2-page interactive dashboard with slicers and cross-filtering |
-
----
-
-## ⚙️ Data Pipeline
-
-```sql
-domain_properties (raw)
-        │
-        ▼
-clean_sydney_properties   ← Null removal, standardisation
-        │
-        ▼
-sydney_properties         ← Feature engineering (12+ derived columns)
-        │
-        ├── kpi_median_price         (KPI 1)
-        ├── kpi_sales_volume         (KPI 2)
-        ├── kpi_suburb_prices        (KPI 3)
-        ├── kpi_property_type_prices (KPI 4)
-        ├── kpi_price_per_bed        (KPI 5)
-        ├── kpi_price_per_sqm        (KPI 6)
-        ├── kpi_price_distance       (KPI 7)
-        ├── kpi_density_price        (KPI 8)
-        ├── kpi_income_price         (KPI 9)
-        ├── kpi_affordability        (KPI 10)
-        ├── kpi_cash_rate            (KPI 11)
-        └── kpi_real_price           (KPI 12 — inflation adjusted)
-```
+| Visualisation | Power BI Desktop | 3-page interactive dashboard with slicers and cross-filtering |
 
 ---
 
 ## 📊 Key Findings
 
-### Page 1 — Suburb & Property Insights
+### Suburb & Property Insights
 
 | Insight | Finding |
 |---|---|
@@ -82,7 +55,7 @@ sydney_properties         ← Feature engineering (12+ derived columns)
 
 ---
 
-### Page 2 — Macro & Structural Drivers
+### Macro & Structural Drivers
 
 | Insight | Finding |
 |---|---|
@@ -102,32 +75,4 @@ sydney_properties         ← Feature engineering (12+ derived columns)
 - **Affordability Ratio** — `price / suburb_median_income` surfaces structural stress beyond raw price rankings, identifying which suburbs are genuinely out of reach
 
 ---
-
-## 📌 How to Use
-
-```bash
-git clone https://github.com/lavitrabhavsar-1991/Sydney-Housing-Market-Analysis.git
-```
-
-1. **SQL Pipeline** — Run `Sydney_House_SQL_Query.sql` against a MySQL 8.0+ instance containing the `domain_properties` source table. Tables will build in order.
-2. **Power BI Dashboard** — Open `Sydney_House_Visualization.pbix` in Power BI Desktop. Refresh data source connection to your MySQL instance if needed.
-
----
-
-## 🚀 Future Enhancements
-
-- [ ] Predictive model (Linear Regression / XGBoost) on price drivers
-- [ ] Python (pandas) data validation layer pre-SQL ingestion  
-- [ ] Time-series forecast of median price under different cash rate scenarios
-- [ ] Automated refresh pipeline via Power BI Gateway
-
----
-
-## 👤 About
-
-Built by an aspiring data analyst passionate about turning raw data into decisions.  
-📧 Connect with me on [LinkedIn](#) | 🐙 [GitHub](https://github.com/lavitrabhavsar-1991)
-
----
-
 *Data sourced from Domain.com.au property listings. For educational and portfolio purposes.*
