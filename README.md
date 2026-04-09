@@ -34,7 +34,7 @@ This is where the data got interesting.
 
 **1. The most "expensive" suburb in Sydney is a statistical illusion.**
 
-Kurraba Point sits at a staggering **~$34M median** which is almost 5× higher than its nearest competitors at $6–9M. But when you calculate its affordability ratio (property price ÷ suburb median income), it comes out at **419×** annual income. The next highest suburb, Rose Bay, is 119×. Darling Point is 104×.
+Kurraba Point sits at a staggering **$34M median** which is almost 5× higher than its nearest competitors at $6–9M. But when you calculate its affordability ratio (property price ÷ suburb median income), it comes out at **419×** annual income. The next highest suburb, Rose Bay, is 119×. Darling Point is 104×.
 
 That gap between 419× and 119× doesn't suggest Kurraba Point is "more expensive" rather it suggests its median is being distorted by an extremely small number of ultra-premium transactions. It's not a functioning residential market. It's an outlier masquerading as a suburb.
 
