@@ -21,7 +21,7 @@ A analytics project examining **Sydney's property market** — from raw data tra
 ```
 sydney-housing-analysis/
 │
-├── 📄 Sydney_House_SQL_Query.sql       # Full data pipeline: cleaning → feature engineering → KPIs
+├── 📄 Sydney_House_SQL_Query.sql       
 ├── 📊 Sydney_House_Visualization.pbix  # Power BI dashboard (3-page interactive report)
 └── 📖 README.md
 ```
