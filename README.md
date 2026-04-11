@@ -1,24 +1,17 @@
-# 🏠 Sydney Housing Market Analysis
-### End-to-End Data Analytics Project | MySQL · Power BI
+# Sydney Housing Market Analysis
 
-![Project Banner](https://img.shields.io/badge/Status-Complete-brightgreen?style=for-the-badge)
-![SQL](https://img.shields.io/badge/MySQL-8.0-blue?style=for-the-badge&logo=mysql&logoColor=white)
-![Power BI](https://img.shields.io/badge/PowerBI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![Domain](https://img.shields.io/badge/Domain-Real%20Estate-red?style=for-the-badge)
 
----
+## Business Question - Are Sydney's housing property market price reasonable or are buyers paying a unreasonable price for a property that doesn't reflect its value?
 
-## 🎯 The Business Question
+## Context behind Business Question - Was discussing with my friends whether Property price in Sydney are out of control and if we would ever own a home in the future. So mid conversartion I thought to myself why not find out the answer for ourselves?
 
-> **Does Sydney's property market price homes rationally or are buyers paying a premium for reputation over real value?**
+Sydney is infamous for being consistently ranked among the world's least affordable cities. But deciding which metric we shall use to measure how "unaffordable" changes the answer entirely. Based on the data the Raw median prices favour suburbs with a handful of ultra-luxury sales. Price per square metre rewards density. Affordability ratio exposes structural stress within Sydney Housing Market.
 
-Sydney is consistently ranked among the world's least affordable cities. But which metric you use to measure "expensive" changes the answer entirely. Raw median prices favour suburbs with a handful of ultra-luxury sales. Price per square metre rewards density. Affordability ratio exposes structural stress.
-
-This project was built to answer one question: **If you stripped away suburb reputation and looked purely at the data, where does value actually exist in Sydney's property market and what is an illusion?**
+This project was built to answer one question: **If you looked purely at the data, where does value actually exist in Sydney's property market and what is an illusion?**
 
 ---
 
-## 💡 What I Expected vs What Actually Surprised Me
+## What I Expected vs What Actually Surprised Me
 
 This is where the data got interesting.
 
