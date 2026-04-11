@@ -1,9 +1,9 @@
 # Sydney Housing Market Analysis
 
 
-## Business Question - Are Sydney's housing property market price reasonable or are buyers paying a unreasonable price for a property that doesn't reflect its value?
+## Business Question - Are Sydney's housing property market price reasonable or are buyers paying a unreasonable price for a property that doesn't reflect its value? 
 
-## Context behind Business Question - Was discussing with my friends whether Property price in Sydney are out of control and if we would ever own a home in the future. So mid conversartion I thought to myself why not find out the answer for ourselves?
+Context behind Business Question - Was discussing with my friends whether Property price in Sydney are out of control and if we would ever own a home in the future. So mid conversartion I thought to myself why not find out the answer for ourselves?
 
 Sydney is infamous for being consistently ranked among the world's least affordable cities. But deciding which metric we shall use to measure how "unaffordable" changes the answer entirely. Based on the data the Raw median prices favour suburbs with a handful of ultra-luxury sales. Price per square metre rewards density. Affordability ratio exposes structural stress within Sydney Housing Market.
 
