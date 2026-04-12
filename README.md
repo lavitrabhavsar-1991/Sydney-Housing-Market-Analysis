@@ -1,72 +1,62 @@
 # Sydney Housing Market Analysis
 
+## Business Question - Can the average person in Sydney actually afford to buy a property and if so, what type of property and in which suburbs? 
 
-## Business Question - Are Sydney's housing property market price reasonable or are buyers paying a unreasonable price for a property that doesn't reflect its value? 
+Context behind Business Question - I was having a conversation with my friends on whether Property price in Sydney are out of control and if we would ever own a home in the future. However, mid conversartion I thought to myself why not find out the answer for ourselves?
 
-Context behind Business Question - Was discussing with my friends whether Property price in Sydney are out of control and if we would ever own a home in the future. So mid conversartion I thought to myself why not find out the answer for ourselves?
+Sydney is infamous for being consistently ranked among the world's least affordable cities. But deciding which metric we shall use to measure how "unaffordable" changes the answer entirely. I wanted to go beyond the headlines and understand what's actually driving the market prices, is it location, suburb reputation, property type or income levels etc. 
 
-Sydney is infamous for being consistently ranked among the world's least affordable cities. But deciding which metric we shall use to measure how "unaffordable" changes the answer entirely. Based on the data the Raw median prices favour suburbs with a handful of ultra-luxury sales. Price per square metre rewards density. Affordability ratio exposes structural stress within Sydney Housing Market.
+**This project was built to answer one question: If you were a first-home buyer or property investor in Sydney, are there any property which you can afford to buy?
+**
 
-This project was built to answer one question: **If you looked purely at the data, where does value actually exist in Sydney's property market and what is an illusion?**
+## Property Prices based on Location
+Location is one of the biggest factor in property price. Distance from the CBD is the single strongest price driver in the dataset. The further out you go, the more accessible prices become.
 
----
+| Distance from CBD | Median Price |
+|---|---|
+| 0 – 10 km | $ 2.02M |
+| 10 – 20 km | $ 1.79M |
+| 20 – 30 km | $ 1.1M |
+| 30 – 40 km | $ 1 0M |
+| 40 – 50 km | $ 1 M |
+| 50+ km | $ 1 M |
 
-## What I Expected vs What Actually Surprised Me
+The sharpest drop happens between 10–20km and 20–30km showing roughly a $700K difference. Beyond 30km, the prices don't change much. For a buyer with a limited budget, the 20–30km distance property offers the best trade-off between price and proximity.
 
-This is where the data got interesting.
+## What property type should we consider buying?
+A common assumption that people say is that units and apartments are the more affordable entry point into the market. However, the data says the opposite:
 
-### ✅ What I Expected (and the data confirmed)
+| Property Type | Median Price |
+|---|---|
+| Block of Units | $ 2.9M |
+| Other types (Development etc) | $ 2 M |
+| House | $ 1.4M |
 
-**CBD proximity drives price. Meaning the closer a place is to CBD the more expensive.** Not surprisingly, the median prices decay almost linearly from **$2.02M** within 10km of the CBD down to approximately **$1.0M** at 50km+. Distance is the single most consistent structural variable in the dataset.
+Based on the table we can see that Houses are still the cheapest property type in the market. Whereas Units, particularly blocks of units in the inner side of Sydney, are the most expensive. Logically, it comes down to geography. Some of the most expensive suburbs in Sydney namely Barangaroo, Darling Point etc are dominated by apartment and unit stock, which pulls the unit median up. Houses, by volume, are concentrated in outer suburbs where prices are lower.
 
-**Prestigious harbour suburbs dominate the top of the price rankings.** Kurraba Point, Darling Point, and Rose Bay all appear near the top of the suburb median price list. Expected.
+What this means for a buyer: If affordability is the priority, a house in the outer suburbs is a more accessible option than a unit in the inner city.
 
----
+## Where should one look to find property which can be considered reasonable value for money?
+Price per square metre tells you how much space you actually get for your money:
+- **Barangaroo leads at $23K/sqm**, followed by Surry Hills and Woollahra at ~$21K/sqm
+- Interestingly, the harbour suburbs such as Kurraba Point and Darling Point do not top this list despite having the some of the highest median income in the city. 
+This is because the suburbs like Barangaroo are dominated by compact, high-end apartments. Harbour suburbs tend to have larger properties, which reduces the per-sqm cost as compared to houses.
 
-### ⚡ What Surprised Me (where the data challenged assumptions)
+What this means for a buyer: If you want more value for your money, the outer suburbs are where price per sqm drops significantly. Buying property in Suburbs near Inner Sydney is paying a premium for location, not for the quality or size of such properties.
 
-**1. The most "expensive" suburb in Sydney is a statistical illusion.**
 
-Kurraba Point sits at a staggering **$34M median** which is almost 5× higher than its nearest competitors at $6–9M. But when you calculate its affordability ratio (property price ÷ suburb median income), it comes out at **219×** annual income. The next highest suburb, Rose Bay, is 119×. Darling Point is 104×.
+### Does a busier suburb mean a more expensive one?
+In simple words, not necessarily and this matters if you want to stay close to the city without paying a premium price. Chippendale is one of the densest suburb in the dataset at **18,571 people per km²** and yet it does not appear in any top-price ranking by median price, price per sqm or price per bedroom.
+The pattern holds more broadly since high density in Sydney tends to mean more housing supply, which keeps prices more accessible than the surrounding area.
+For a buyer this means to remember a automatically rule out a busy, dense suburb. It could be your best shot at staying inner-city without paying inner-city prices.
 
-That gap between 219× and 119× doesn't suggest Kurraba Point is "more expensive" rather it suggests its median is being distorted by an extremely small number of ultra-premium transactions. It's not a functioning residential market. It's an outlier masquerading as a suburb.
+### Are property prices rising according to inflation or just rising consistently?
+Nominal prices tell you what a property are sold for. Inflation-adjusted prices tell you whether prices are genuinely increasing in purchasing power parity (PPP) or simply moving with broader inflation.
+The inflation-adjusted price trend in this dataset shows that real price growth exists, meaning Sydney property prices have risen beyond general inflation over the period analysed. For a buyer, this matters because it confirms that waiting does not generally help. The real cost of buying in Sydney has increased over time, not just the number on the price tag.
 
-**Recommendation for buyers/investors:** Kurraba Point's headline median should be treated as noise, not signal. Rose Bay and Darling Point represent genuinely high-value markets; Kurraba Point represents statistical distortion.
+## In conclusion What Should a Buyer Actually Do?
+Based on the data:
+- If you want to buy a house: Look at the 20–30km band from the CBD. The Houses are the most affordable property type and the outer ring is where prices plateau. You get the most property for your money here.
+- If you want a unit: Be aware that inner-city units command a significant premium. A unit in the outer suburbs will be considerably more affordable than the dataset's unit median suggests.
+- **If space matters:** Avoid Barangaroo and the inner-city suburbs on price per sqm grounds. The further out you go, the more you get for each dollar spent on floor space.
 
----
-
-**2. The highest price-per-sqm suburb is not a harbour postcode.**
-
-I expected Kurraba Point or Darling Point to dominate price per square metre. They don't.
-
-**Barangaroo leads at $23K/sqm**, followed by Surry Hills and Woollahra at ~$21K/sqm. The prestigious harbour suburbs, despite their eye-catching medians, fall below these inner-city areas on density-adjusted value.
-
-Why? Barangaroo and Surry Hills are dominated by compact, high-end apartments. Harbour suburbs tend to have larger land parcels — which dilutes the per-sqm figure even at high prices. This means an investor buying on price/sqm is buying a completely different market to one buying on raw median.
-
-**Recommendation:** Raw median price and price/sqm are answering different investment questions. A buyer seeking capital growth per dollar spent should look at Barangaroo and inner-city suburbs. A buyer seeking prestige and a larger landholding should look at the harbour belt but they are paying a different kind of premium.
-
----
-
-**3. Units are more expensive than houses — the opposite of the "Great Australian Dream."**
-
-The received wisdom in Australian property is that houses command a premium over apartments and units. In this dataset, **Block of Units has the highest median at $2.9M**, while Houses sit at the bottom of the property type rankings at **$1.4M**.
-
-This likely reflects geography: the most expensive suburbs in Sydney are dominated by apartment and unit stock (Barangaroo, Surry Hills, inner-east). The house market, by volume, is pulled toward outer suburbs where prices are lower. But it directly challenges the assumption that "houses are always worth more."
-
-**Recommendation:** Property type alone is a weak predictor of value without controlling for location. Any analysis comparing house vs unit returns needs to account for the suburb distribution of that stock.
-
----
-
-**4. The densest suburb in Sydney doesn't appear in any top-price list.**
-
-Chippendale ranks first for suburb density at **18,571 people/km²** — yet it does not appear in the top suburbs by median price, price/sqm, or price/bed. This challenges the assumption that density signals desirability or premium pricing.
-
-High density in Sydney appears to reflect affordable inner-city apartment stock, not premium positioning. Density and desirability are not the same variable.
-
----
-
-**5. Darling Point has the highest price per bedroom but not the highest price per sqm.**
-
-Darling Point leads on **price per bed at $2.9M/bedroom** but does not lead on price per sqm. This suggests Darling Point properties are large-format, low-density dwellings where you are paying for fewer, more exclusive bedrooms in larger homes. It's a different type of premium to Barangaroo's compact, high-value-per-metre stock.
-
----
