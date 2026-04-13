@@ -53,7 +53,7 @@ For a buyer this means to remember a automatically rule out a busy, dense suburb
 Nominal prices tell you what a property are sold for. Inflation-adjusted prices tell you whether prices are genuinely increasing in purchasing power parity (PPP) or simply moving with broader inflation.
 The inflation-adjusted price trend in this dataset shows that real price growth exists, meaning Sydney property prices have risen beyond general inflation over the period analysed. For a buyer, this matters because it confirms that waiting does not generally help. The real cost of buying in Sydney has increased over time, not just the number on the price tag.
 
-## Can the average person afford to buy a house in Sydney?
+### Can the average person afford to buy a house in Sydney?
 Yes but where and what you can buy matters enormously.
 The data points to one clear direction which is as you go further out from CBD you go the more affordable a house is. The 20–30km band is where prices drop sharply and then stagnates, meaning you're not saving much by going further beyond 30K from CBD. 
 If staying closer to the city is important, density is your friend. Suburbs like Chippendale offer easier CBD access without the price tag that come along with it.
