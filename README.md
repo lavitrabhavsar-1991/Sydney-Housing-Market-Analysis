@@ -22,7 +22,7 @@ Location is one of the biggest factor in property price. Distance from the CBD i
 
 The sharpest drop happens between 10–20km and 20–30km showing roughly a $700K difference. Beyond 30km, the prices don't change much. For a buyer with a limited budget, the 20–30km distance property offers the best trade-off between price and proximity.
 
-## What property type should we consider buying?
+### What property type should we consider buying?
 A common assumption that people say is that units and apartments are the more affordable entry point into the market. However, the data says the opposite:
 
 | Property Type | Median Price |
@@ -35,7 +35,7 @@ Based on the table we can see that Houses are still the cheapest property type i
 
 What this means for a buyer: If affordability is the priority, a house in the outer suburbs is a more accessible option than a unit in the inner city.
 
-## Where should one look to find property which can be considered reasonable value for money?
+### Where should one look to find property which can be considered reasonable value for money?
 Price per square metre tells you how much space you actually get for your money:
 - **Barangaroo leads at $23K/sqm**, followed by Surry Hills and Woollahra at ~$21K/sqm
 - Interestingly, the harbour suburbs such as Kurraba Point and Darling Point do not top this list despite having the some of the highest median income in the city. 
