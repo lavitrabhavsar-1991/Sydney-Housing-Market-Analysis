@@ -16,7 +16,7 @@ Location is one of the biggest factor in property price. Distance from the CBD i
 | 0 – 10 km | $ 2.02M |
 | 10 – 20 km | $ 1.79M |
 | 20 – 30 km | $ 1.1M |
-| 30 – 40 km | $ 1 0M |
+| 30 – 40 km | $ 1 M |
 | 40 – 50 km | $ 1 M |
 | 50+ km | $ 1 M |
 
