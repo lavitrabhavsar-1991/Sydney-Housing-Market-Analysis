@@ -19,16 +19,16 @@ To answer this, I sourced real property transaction data and did the following:
 ### Property Prices based on Location
 Location is one of the biggest factor in property price. Distance from the CBD is the single strongest price driver in the dataset. The further out you go, the more accessible prices become.
 
-| Distance from CBD | Median Price |
+| Distance from CBD | Median Price |          
 |---|---|
 | 0 – 10 km | $ 2.02M |
 | 10 – 20 km | $ 1.79M |
-| 20 – 30 km | $ 1.1M |
-| 30 – 40 km | $ 1 M |
-| 40 – 50 km | $ 1 M |
-| 50+ km | $ 1 M |
+| 20 – 30 km | $ 1.34M |
+| 30 – 40 km | $ 1.09 M |
+| 40 – 50 km | $ 1.05 M |
+| 50+ km | $ 1.02 M |
 
-The sharpest drop happens between 10–20km and 20–30km showing roughly a $700K difference. Beyond 30km, the prices don't change much. For a buyer with a limited budget, the 20–30km distance property offers the best trade-off between price and proximity.
+The sharpest drop happens between 10–20km and 20–30km showing roughly a $ 450K difference. Beyond 30km, the prices don't change much. For a buyer with a limited budget, the 20–30km distance property offers the best trade-off between price and proximity.
 
 ### What property type should we consider buying?
 A common assumption that people say is that units and apartments are the more affordable entry point into the market. However, the data says the opposite:
