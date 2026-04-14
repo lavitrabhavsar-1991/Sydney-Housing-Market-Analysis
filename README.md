@@ -48,11 +48,11 @@ Price per square metre tells you how much space you actually get for your money:
 
 | Suburb | Price per sqm |
 |---|---|
-| Barangaroo | ~$23K |
-| Surry Hills | ~$21K |
-| Woollahra | ~$21K |
+| Barangaroo | $ 23K |
+| Surry Hills | $ 21K |
+| Woollahra | $ 21K |
 
-- **Barangaroo leads at $23K/sqm**, followed by Surry Hills and Woollahra at ~$21K/sqm
+- **Barangaroo leads at $ 23K/sqm**, followed by Surry Hills and Woollahra at $ 21K/sqm
 - Interestingly, the harbour suburbs such as Kurraba Point and Darling Point do not top this list despite having the some of the highest median income in the city. 
 This is because the suburbs like Barangaroo are dominated by compact, high-end apartments. Harbour suburbs tend to have larger properties, which reduces the per-sqm cost as compared to houses.
 
